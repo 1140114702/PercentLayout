@@ -18,6 +18,7 @@
             app:title="@string/app_name" />
 
         <TextView
+            android:id="@+id/top_view"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:background="@color/colorAccent"
@@ -28,35 +29,41 @@
             app:layout_widthPercent="100%" />
 
         <com.zwonb.percentlayout.PercentLinearLayout
+            android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="16dp"
             android:background="@color/colorPrimary"
-            app:layout_aspectRatio="200%"
+            app:layout_aspectRatio="204%"
             app:layout_widthPercent="100%">
 
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/left_view"
+                android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_margin="4dp"
+                app:layout_marginTopPercent="4.08%"
+                app:layout_marginLeftPercent="2%"
+                app:layout_marginRightPercent="1%"
                 android:background="@color/colorAccent"
                 android:gravity="center"
                 android:text="aspectRatio=100%"
                 android:textSize="16sp"
                 app:layout_aspectRatio="100%"
-                app:layout_widthPercent="50%" />
+                app:layout_widthPercent="47%" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/right_view"
+                android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_margin="4dp"
+                app:layout_marginTopPercent="4.08%"
+                app:layout_marginLeftPercent="1%"
+                app:layout_marginRightPercent="2%"
                 android:background="@color/colorAccent"
                 android:gravity="center"
-                android:padding="4dp"
                 android:text="aspectRatio=100%"
                 android:textSize="16sp"
                 app:layout_aspectRatio="100%"
-                app:layout_widthPercent="50%" />
+                app:layout_widthPercent="47%" />
         </com.zwonb.percentlayout.PercentLinearLayout>
 
     </com.zwonb.percentlayout.PercentLinearLayout>
