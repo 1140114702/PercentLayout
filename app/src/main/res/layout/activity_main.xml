@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zwonb.percentlayout.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="@string/app_name" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:text="aspectRatio=298%"
+            android:textSize="16sp"
+            app:layout_aspectRatio="298%"
+            app:layout_widthPercent="100%" />
+
+        <com.zwonb.percentlayout.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            app:layout_aspectRatio="200%"
+            app:layout_widthPercent="100%">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="4dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="aspectRatio=100%"
+                android:textSize="16sp"
+                app:layout_aspectRatio="100%"
+                app:layout_widthPercent="50%" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="4dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="aspectRatio=100%"
+                android:textSize="16sp"
+                app:layout_aspectRatio="100%"
+                app:layout_widthPercent="50%" />
+        </com.zwonb.percentlayout.PercentLinearLayout>
+
+    </com.zwonb.percentlayout.PercentLinearLayout>
+
+
+    <View
+        android:layout_width="0.4dp"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="#000" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:layout_centerInParent="true"
+        android:background="#000" />
+
+</android.support.percent.PercentRelativeLayout>
