@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements ViewTreeObserver.
                 + ",mb=" + leftParams.bottomMargin);
 
         right_view.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-        LinearLayout.LayoutParams rightParams = (LinearLayout.LayoutParams) left_view.getLayoutParams();
+        LinearLayout.LayoutParams rightParams = (LinearLayout.LayoutParams) right_view.getLayoutParams();
         right_view.setText("aspectRatio=100%,width=" + right_view.getWidth()
                 + ",height=" + right_view.getHeight()
                 + ",ml=" + rightParams.leftMargin

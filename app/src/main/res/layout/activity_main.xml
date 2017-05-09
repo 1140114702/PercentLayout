@@ -34,7 +34,7 @@
             android:layout_height="0dp"
             android:layout_marginTop="16dp"
             android:background="@color/colorPrimary"
-            app:layout_aspectRatio="204%"
+            app:layout_aspectRatio="204.08%"
             app:layout_widthPercent="100%">
 
             <TextView
