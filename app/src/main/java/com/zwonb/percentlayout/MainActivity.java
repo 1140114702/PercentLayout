@@ -11,6 +11,8 @@ public class MainActivity extends AppCompatActivity implements ViewTreeObserver.
     private TextView top_view;
     private TextView left_view;
     private TextView right_view;
+    private TextView left;
+    private TextView right;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,10 +23,14 @@ public class MainActivity extends AppCompatActivity implements ViewTreeObserver.
 
     private void initView() {
         top_view = (TextView) findViewById(R.id.top_view);
+        left = (TextView) findViewById(R.id.left);
+        right = (TextView) findViewById(R.id.right);
         left_view = (TextView) findViewById(R.id.left_view);
         right_view = (TextView) findViewById(R.id.right_view);
 
         top_view.getViewTreeObserver().addOnGlobalLayoutListener(this);
+        left.getViewTreeObserver().addOnGlobalLayoutListener(this);
+        right.getViewTreeObserver().addOnGlobalLayoutListener(this);
         left_view.getViewTreeObserver().addOnGlobalLayoutListener(this);
         right_view.getViewTreeObserver().addOnGlobalLayoutListener(this);
     }
@@ -32,8 +38,26 @@ public class MainActivity extends AppCompatActivity implements ViewTreeObserver.
     @Override
     public void onGlobalLayout() {
         top_view.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-        top_view.setText("aspectRatio=298%,width=" + top_view.getWidth()
+        top_view.setText("aspectRatio=300%,width=" + top_view.getWidth()
                 + ",height=" + top_view.getHeight());
+
+        left.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+        LinearLayout.LayoutParams leftLayoutParams = (LinearLayout.LayoutParams) left.getLayoutParams();
+        left.setText("aspectRatio=100%,width=" + left.getWidth()
+                + ",height=" + left.getHeight()
+                + ",ml=" + leftLayoutParams.leftMargin
+                + ",mt=" + leftLayoutParams.topMargin
+                + ",mr=" + leftLayoutParams.rightMargin
+                + ",mb=" + leftLayoutParams.bottomMargin);
+
+        right.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+        LinearLayout.LayoutParams rightLayoutParams = (LinearLayout.LayoutParams) right.getLayoutParams();
+        right.setText("aspectRatio=100%,width=" + right.getWidth()
+                + ",height=" + right.getHeight()
+                + ",ml=" + rightLayoutParams.leftMargin
+                + ",mt=" + rightLayoutParams.topMargin
+                + ",mr=" + rightLayoutParams.rightMargin
+                + ",mb=" + rightLayoutParams.bottomMargin);
 
         left_view.getViewTreeObserver().removeOnGlobalLayoutListener(this);
         LinearLayout.LayoutParams leftParams = (LinearLayout.LayoutParams) left_view.getLayoutParams();
