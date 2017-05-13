@@ -37,7 +37,25 @@
             app:layout_heightPercent="10%"
             app:layout_widthPercent="70%" />
 
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:id="@+id/add_view_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.zwonb.percentlayout.Test
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="@string/app_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
         <com.zwonb.percentlayout.PercentLinearLayout
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_gravity="center_vertical"

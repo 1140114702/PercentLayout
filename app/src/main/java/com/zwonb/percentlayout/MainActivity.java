@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity implements ViewTreeObserver.
         right.getViewTreeObserver().addOnGlobalLayoutListener(this);
         left_view.getViewTreeObserver().addOnGlobalLayoutListener(this);
         right_view.getViewTreeObserver().addOnGlobalLayoutListener(this);
+
+        ((LinearLayout)findViewById(R.id.add_view_layout)).addView(new Test(this));
     }
 
     @Override
